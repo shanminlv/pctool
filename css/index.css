@@ -1,0 +1,67 @@
+*{margin: 0;padding: 0;}
+li{list-style-type: none;}
+
+.wrapper{width: 1320px;margin: 0 auto;position: relative;}
+
+.left{width: 857px;height: 800px;overflow: scroll;background:rgba(0,0,0,.5);}
+.img{margin: 20px;min-height:800px;background: white; overflow:hidden;position: relative;counter-reset:product;}
+.img img{width: 800px;}
+.img p{font-size: 50px;margin-top: 100px;text-align: center;width: 100%;}
+.imgdata{position: absolute;z-index: 11;left: 0;top: 0;width: 100%;}
+.a{position:absolute;z-index: 13;left: 0;top: 0;width: 100%;height: 100%;counter-reset:brand;}
+
+.a a{position:absolute;background: rgba(0,0,0,.3);z-index: 12;left: 0;top: 0;
+	text-decoration: none;}
+
+.a .product::before{counter-increment:product;content:counter(product);display:block;padding:5px;font:18px "Microsoft YaHei";color:#fff;pointer-events:none;}
+.a .brand::before{counter-increment:brand;content:counter(brand);display:block;padding:5px;font:18px "Microsoft YaHei";color:#fff;pointer-events:none;}
+
+.a a:hover::after{content:'×';position:absolute;top:0;right:0;width:30px;height:30px;font-size:18px;line-height:30px;text-align:center;color:#fff;background:rgba(255,0,0,0.5);}
+.product b{position: absolute;width: 75px;height: 75px;
+	     background: rgba(255,255,255,.6);display: block;cursor: move;line-height: 75px;}
+
+.product{border: 3px solid #7fff00;}
+.brand{border: 3px solid yellow;}
+.view{position:absolute;z-index: 12;left: 0;top: 0;background: rgba(0,0,0,.5);}
+
+.right{width: 460px;position: absolute;height: 800px;left: 860px;top:0;}
+.id{height: 450px;position: relative;}
+.id ul{position: relative;z-index: 10;width: 100%;clear: both;}
+.id ul li{height: 30px;line-height: 30px;text-align: center;border: 3px solid transparent;
+	font-weight: bold;}
+.id ul li:nth-child(1){background: #7fff00;color: black;float: left;width: 48.5%;border: 3px solid red;}
+.id ul li:nth-child(2){background: yellow;border: 3px solid transparent;overflow: hidden;}
+
+.common-id{width: 100%;position: absolute;height: 100%;left: 0;top: 0;z-index: 5;}
+#product-id{background: #7fff00;}
+#brand-id{background: yellow;}
+table{border-collapse: collapse;border-spacing: 0;}
+td{border:1px solid;}
+.common-id .divtext{position: absolute;left: 0;top: 57px;width: 100%;height:392px; overflow: scroll; }
+.z{z-index: 7;}
+
+.store{position: absolute;left: 0;top: 36px;z-index: 10;text-align: center;font-size: 0;-webkit-text-size-adjust:none;}
+.store span {display: inline-block;width: 85px;height: 20px;line-height: 20px;font-size: 16px;
+  outline: 1px solid black;}
+.store span:nth-of-type(1){width: 18px;}
+
+.check{width: 100%;margin-top: 20px;}
+.type{margin-left: 30px;}
+button{width:100%;height: 50px;border: none;background: #777;color: white;font-size: 30px;margin-top: 30px;}
+
+/*输出部分*/
+.output{border: 1px solid black;clear: both;margin: 30px 0;}
+.output ul {width: 100%;border: 1px solid black;overflow: hidden;}
+.output li{float: left;width: 10%;outline: 1px solid black;text-align: center;font-weight: bold;}
+.content{position: relative;width: 100%;height: 1000px;}
+.content-area{position: absolute;left: 0;top: 0;width: 100%;height: 100%;clear: both;}
+.output .outline{background: red;color: white;}
+.product-left{width: 70%;height: 100%;float: left;}
+.brand-right{width: 30%;height: 100%;float: left;}
+.content-area textarea{width: 100%;height: 979px;}
+.product-left::before{display: block;width: 100%;height: 20px;text-align: center;content: "单品id";background:#7fff00;}
+.brand-right::before{display: block;width: 100%;height: 20px;text-align: center;content: "专场id";background:yellow;}
+
+/*隐藏部分*/
+.data{display: none;}
+.data textarea{width: 100%;height: 1000px;}
